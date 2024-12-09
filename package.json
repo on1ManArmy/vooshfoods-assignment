@@ -2,7 +2,7 @@
   "name": "voosh_assignment",
   "version": "1.0.0",
   "engines": {
-    "node": "22.x"
+    "node": "16.x"
   },
   "main": "app.js",
   "dependencies": {
