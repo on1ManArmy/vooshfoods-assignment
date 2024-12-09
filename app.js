@@ -11,17 +11,15 @@ const favoritesRoutes = require('./routes/favoritesRoutes');
 const app = express();
 
 // Middleware
-app.use(bodyParser.json()); // Parse JSON bodies
+app.use(bodyParser.json());
 app.use('/favorites', favoritesRoutes); 
 
 // Routes
-app.use('/users', userRoutes);     // Base path for user-related routes
-app.use('/artists', artistRoutes); // Base path for artist-related routes
+app.use('/users', userRoutes);    
+app.use('/artists', artistRoutes); 
+app.use('/artists', artistRoutes); 
+app.use('/albums', albumRoutes); 
 
-app.use('/artists', artistRoutes); // Artist routes
-app.use('/albums', albumRoutes);  // Album routes
-
-// Handle 404 errors
 app.use((req, res) => {
   res.status(404).json({
     status: 404,
